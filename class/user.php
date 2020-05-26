@@ -65,7 +65,7 @@
 			);
 			return $this->deleteData($args,$is_die);
 		}
-	}
+	 }
 
 	// $args = array(
 			// 	'fields' => array('id','username','email','password'),

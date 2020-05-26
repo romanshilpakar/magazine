@@ -14,10 +14,10 @@
     <!-- Font Awesome -->
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="assets//nprogress/nprogress.css" rel="stylesheet">
+    <link href="assets/nprogress/nprogress.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="assets//css/custom.min.css" rel="stylesheet">
+    <link href="assets/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">

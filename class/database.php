@@ -5,7 +5,8 @@
 		protected $sql;
 		protected $table;
 
-		function __construct(){
+
+        function __construct(){
 			try{
 				$this->conn = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME,DB_USER,DB_PASS);
 				$this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -14,9 +15,9 @@
 				error_log(Date("M d, Y h:i:s a").' : (DB Connection) : '.$e->getMessage()."\r\n",3,ERROR_PATH.'error.log');
 				return false;
 			}
-		}
-
-		function runQuery($sql){
+        }
+        
+        function runQuery($sql){
 			try{
 				$this->stmt = $this->conn->prepare($sql);
 				$this->stmt->execute();
@@ -25,9 +26,9 @@
 				error_log(Date("M d, Y h:i:s a").' : (run Query database) : '.$e->getMessage()."\r\n",3,ERROR_PATH.'error.log');
 				return false;
 			}
-		}
-
-		function getDataFromQuery($sql){
+        }
+        
+        function getDataFromQuery($sql){
 			try{
 				$this->sql = $sql;
 				$this->stmt= $this->conn->prepare($this->sql);
@@ -38,9 +39,9 @@
 				error_log(Date("M d, Y h:i:s a").' : (getDataFromQuery) : '.$e->getMessage()."\r\n",3,ERROR_PATH.'error.log');
 				return false;
 			}
-		}
+        }
 
-		protected function addData($data,$is_die=false){
+        protected function addData($data,$is_die=false){
 			// INSERT INTO TABLE SET 
 			// 	columnname = :columnname,
 			// 	columnname = :columnname,
@@ -79,31 +80,31 @@
 					exit();
 				}
 
-				$this->stmt=$this->conn->prepare($this->sql);
+				 $this->stmt=$this->conn->prepare($this->sql);
 
-				//value bind
+				 //value bind
 
-				if (isset($data) && !empty($data)) {
-					if (is_array($data)) {
-						foreach ($data as $columnname => $value) {
-							if (is_int($value)) {
-								$param = PDO::PARAM_INT;
-							}else if(is_bool($value)){
-								$param = PDO::PARAM_BOOL;
-							}else{
-								$param = PDO::PARAM_STR;
-							}
+				 if (isset($data) && !empty($data)) {
+				 	if (is_array($data)) {
+				 		foreach ($data as $columnname => $value) {
+				 			if (is_int($value)) {
+				 				$param = PDO::PARAM_INT;
+				 			}else if(is_bool($value)){
+				 				$param = PDO::PARAM_BOOL;
+				 			}else{
+				 				$param = PDO::PARAM_STR;
+				 			}
 
-							$this->stmt->bindValue(":".$columnname,$value, $param);
-						}
-					}
-				}else{
-					throw new Exception("Data cannot be inserted without data");
-				}
-				//value bind ends
+				 			$this->stmt->bindValue(":".$columnname,$value, $param);
+				 		}
+				 	}
+				 }else{
+				 	throw new Exception("Data cannot be inserted without data");
+				 }
+				 //value bind ends
 
-				$success = $this->stmt->execute();
-				return $success;
+				 $success = $this->stmt->execute();
+				 return $success;
 
 			}catch(PDOException $e){
 				error_log(Date("M d, Y h:i:s a").' : (addData) : '.$e->getMessage()."\r\n",3,ERROR_PATH.'error.log');
@@ -113,6 +114,7 @@
 				return false;
 			}
 		}
+		
 
 		protected function getData($args,$is_die=false){
 			// SELECT fields(*) FROM tablename 
@@ -469,6 +471,5 @@
 				return false;
 			}	
 		}
-	}
-
+         }
 ?>
