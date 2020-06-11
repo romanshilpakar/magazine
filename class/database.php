@@ -180,7 +180,9 @@
 				//Orderring
 
 				if (isset($args['order']) && !empty($args['order'])) {
-					if ($args['order']=='DESC') {
+					if (is_array($args['order'])) {
+						$this->sql.=" order by ".$args['order']['columnname']." ".$args['order']['orderType']." ";
+					}else if ($args['order']=='DESC') {
 						$this->sql.=" order by id DESC ";
 					}else{
 						$this->sql.=" order by id ASC ";
@@ -189,6 +191,7 @@
 					$this->sql.=" order by id DESC ";
 				}
 				//Ordering end
+
 
 				if (isset($args['limit']) && !empty($args['limit'])) {
 					$this->sql.=" LIMIT ".$args['limit']['offset'].", ".$args['limit']['no_of_data'];

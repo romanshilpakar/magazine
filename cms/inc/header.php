@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Magazine | <?php echo (isset($header) && !empty($header))?$header:"Dashboard" ?> </title>
+    <title>ROOMYAN| <?php echo (isset($header) && !empty($header))?$header:"Dashboard" ?> </title>
 
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index" class="site_title"><i class="fa fa-paw"></i> <span>Khwopa Portal!</span></a>
+              <a href="index" class="site_title"><i class="fa fa-paw"></i> <span>ROOMYAN</span></a>
             </div>
 
             <div class="clearfix"></div>

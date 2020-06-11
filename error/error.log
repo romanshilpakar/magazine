@@ -7,3 +7,53 @@ May 30, 2020 11:45:01 am : (run Query database) : SQLSTATE[23000]: Integrity con
 May 30, 2020 11:45:29 am : (run Query database) : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin@magazine.com' for key 'email'
 May 30, 2020 01:37:26 pm : (run Query database) : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin@magazine.com' for key 'email'
 May 30, 2020 01:56:36 pm : (run Query database) : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin@magazine.com' for key 'email'
+May 31, 2020 08:24:25 pm : (run Query database) : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin@magazine.com' for key 'email'
+Jun 01, 2020 12:00:17 pm : (run Query database) : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin@magazine.com' for key 'email'
+Jun 05, 2020 09:25:19 am : (DB Connection) : SQLSTATE[HY000] [1049] Unknown database 'khwopa'
+Jun 06, 2020 01:30:00 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.joinus' doesn't exist
+Jun 06, 2020 01:32:51 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.joinus' doesn't exist
+Jun 06, 2020 01:40:49 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.socials' doesn't exist
+Jun 06, 2020 01:41:16 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.socials' doesn't exist
+Jun 06, 2020 01:41:16 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.socials' doesn't exist
+Jun 06, 2020 01:44:46 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.socials' doesn't exist
+Jun 06, 2020 01:45:06 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.socials' doesn't exist
+Jun 06, 2020 01:45:12 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.socials' doesn't exist
+Jun 06, 2020 01:45:12 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.socials' doesn't exist
+Jun 06, 2020 01:45:43 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.socials' doesn't exist
+Jun 06, 2020 01:45:43 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.socials' doesn't exist
+Jun 06, 2020 01:46:28 pm : (run Query database) : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin@roomyan.com' for key 'email'
+Jun 06, 2020 03:51:38 pm : (run Query database) : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin@roomyan.com' for key 'email'
+Jun 07, 2020 10:14:01 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.advertisements' doesn't exist
+Jun 07, 2020 10:15:39 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.advertisements' doesn't exist
+Jun 07, 2020 10:16:19 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.advertisements' doesn't exist
+Jun 07, 2020 10:17:31 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.advertisements' doesn't exist
+Jun 07, 2020 10:18:51 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.advertisements' doesn't exist
+Jun 07, 2020 10:21:05 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.advertisements' doesn't exist
+Jun 07, 2020 10:21:07 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.advertisements' doesn't exist
+Jun 07, 2020 10:21:14 pm : (run Query database) : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin@roomyan.com' for key 'email'
+Jun 07, 2020 10:21:43 pm : (run Query database) : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin@roomyan.com' for key 'email'
+Jun 08, 2020 11:19:52 am : (run Query database) : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin@roomyan.com' for key 'email'
+Jun 08, 2020 12:37:08 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.contactmessages' doesn't exist
+Jun 08, 2020 12:42:59 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.contactmessages' doesn't exist
+Jun 08, 2020 12:43:05 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.contactmessages' doesn't exist
+Jun 08, 2020 12:45:08 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.contactmessages' doesn't exist
+Jun 08, 2020 12:45:09 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.contactmessages' doesn't exist
+Jun 08, 2020 12:45:42 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.contactmessages' doesn't exist
+Jun 08, 2020 12:45:50 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.contactmessages' doesn't exist
+Jun 08, 2020 12:45:53 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.contactmessages' doesn't exist
+Jun 08, 2020 12:53:36 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.contactmessages' doesn't exist
+Jun 08, 2020 12:53:41 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.contactmessages' doesn't exist
+Jun 08, 2020 12:53:44 pm : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.contactmessages' doesn't exist
+Jun 08, 2020 12:54:13 pm : (run Query database) : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin@roomyan.com' for key 'email'
+Jun 09, 2020 11:32:35 am : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.newsletters' doesn't exist
+Jun 09, 2020 11:33:14 am : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.newsletters' doesn't exist
+Jun 09, 2020 11:33:15 am : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.newsletters' doesn't exist
+Jun 09, 2020 11:33:19 am : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.newsletters' doesn't exist
+Jun 09, 2020 11:35:35 am : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.newsletters' doesn't exist
+Jun 09, 2020 11:35:35 am : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.newsletters' doesn't exist
+Jun 09, 2020 11:35:44 am : (addData) : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'roomyan.newsletters' doesn't exist
+Jun 09, 2020 11:39:04 am : (run Query database) : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin@roomyan.com' for key 'email'
+Jun 10, 2020 05:25:14 pm : (DB Connection) : SQLSTATE[HY000] [2002] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+Jun 10, 2020 05:27:10 pm : (DB Connection) : SQLSTATE[HY000] [2002] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+

@@ -22,8 +22,8 @@
 	'superuser' => "
 		INSERT into users SET 
 			username = 'Admin',
-			email = 'admin@magazine.com',
-			password = '".sha1('admin@magazine.comadmin123')."',
+			email = 'admin@roomyan.com',
+			password = '".sha1('admin@roomyan.comroman2056')."',
 			role = 'Admin',
 			status = 'Active'	
 	",
@@ -57,20 +57,21 @@
 					)
 			",
 
-			'Advertisement' => "
-			CREATE TABLE IF NOT EXISTS advertisement
-				(
-					id int not null AUTO_INCREMENT PRIMARY KEY,
-					vendor_name varchar(30),
-					url varchar(50),
-					adType enum('widead','simplead') default 'simplead',
-					image varchar(50),
-					status enum('Active','Passive') default 'Active',
-					added_by int,
-					created_date datetime default current_timestamp,
-					updated_date datetime on update current_timestamp
-				)
-		",
+			'advertisement'=>"
+        CREATE TABLE IF NOT EXISTS advertisements
+          (
+            id int not null AUTO_INCREMENT PRIMARY KEY,
+            adTitle varchar(100),
+            url varchar(250),
+            type enum('Simple','Wide') default 'Simple',
+            status enum('Active','Passive') default 'Passive',
+            image varchar(50),
+            added_by int,
+            created_date datetime default current_timestamp,
+            updated_date datetime on update current_timestamp
+          )
+      ",
+
 		'Info' => "
 			CREATE TABLE IF NOT EXISTS info
 				(
@@ -84,19 +85,66 @@
 					updated_date datetime on update current_timestamp
 				)
 		",
-		'Share' => "
-			CREATE TABLE IF NOT EXISTS share
-				(
-					id int not null AUTO_INCREMENT PRIMARY KEY,
-					icon_name varchar(30),
-					url varchar(50),
-					class varchar(30),
-					status enum('Active','Passive') default 'Active',
-					added_by int,
-					created_date datetime default current_timestamp,
-					updated_date datetime on update current_timestamp
-				)
-		"
+		
+
+		'comment' => "
+				CREATE TABLE IF NOT EXISTS comments
+					(
+						id int not null AUTO_INCREMENT PRIMARY KEY,
+						
+						name varchar(50),
+						email varchar(100),
+						website varchar(50),
+						message text,
+						commentType enum('comment', 'reply') default 'comment',
+						commentid int,
+						
+						blogid int,
+						state enum('waiting','accept','reject') default 'waiting',
+						status enum('Active','Passive') default 'Active',
+						added_by int,
+						created_date datetime default current_timestamp,
+						updated_date datetime on update current_timestamp
+					)
+			",
+
+			'archive' => "
+				CREATE TABLE IF NOT EXISTS archives
+					(
+						id int not null AUTO_INCREMENT PRIMARY KEY,
+						date varchar(20),
+						status enum('Active','Passive') default 'Active',
+						added_by int,
+						created_date datetime default current_timestamp,
+						updated_date datetime on update current_timestamp
+					)
+			",
+			'contactmessage'=>"
+                  CREATE TABLE IF NOT EXISTS contactmessages
+                  (
+                   id int not null AUTO_INCREMENT PRIMARY KEY,
+                   email varchar(100),
+                   subject varchar(50),
+                   message text,
+                   state enum('waiting','accept','reject') default 'waiting',
+                   status enum('Active','Passive') default 'Active',
+                   added_by int,
+                   created_date datetime default current_timestamp,
+                   updated_date datetime on update current_timestamp
+                  ) 
+				  ",
+				  
+				  'newsletter'=>"
+                    CREATE TABLE IF NOT EXISTS newsletters
+                    (
+                    id int not null AUTO_INCREMENT PRIMARY KEY,
+                    email varchar(100),
+                    status enum('Active','Passive') default 'Active',
+                    added_by int,
+                    created_date datetime default current_timestamp,
+                    updated_date datetime on update current_timestamp
+                    ) 
+                    "    
           );
 
 	foreach ($table as $key => $sql) {

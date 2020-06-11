@@ -12,17 +12,17 @@
 	if (ENVIRONMENT=='DEVELOPMENT') {
 		error_reporting(E_ALL);
 		define('DB_HOST', 'localhost');
-		define('DB_NAME', 'khwopa');
+		define('DB_NAME', 'roomyan');
 		define('DB_USER', 'root');
 		define('DB_PASS', '');
-		define('SITE_URL', 'http://magazine.com/');
+		define('SITE_URL', 'http://roomyan.com/');
 	}else{
 		error_reporting(0);
 		define('DB_HOST', 'localhost');
-		define('DB_NAME', 'magazine');
+		define('DB_NAME', 'roomyan');
 		define('DB_USER', 'root');
 		define('DB_PASS', '');
-		define('SITE_URL', 'http://magazine.com/');
+		define('SITE_URL', 'http://roomyan.com/');
 	}
 
 	define('ERROR_PATH', $_SERVER['DOCUMENT_ROOT'].'error/');
