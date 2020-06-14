@@ -316,9 +316,22 @@ This Privacy Policy was created for roomyan.com by PolicyMaker.io on 2020-06-08.
 					<div class="col-md-4">
 						<!-- ad -->
 						<div class="aside-widget text-center">
-							<a href="#" style="display: inline-block;margin: auto;">
-								<img class="img-responsive" src="assets/img/ad-1.jpg" alt="">
-							</a>
+						<?php 
+									$Ad = new advertisement();
+									$recentAd=$Ad->getLatestAdByType('Simple');
+									if (isset($recentAd[0]) && !empty($recentAd[0])) {
+										
+										if (isset($recentAd[0]->image) && !empty($recentAd[0]->image) && file_exists(UPLOAD_PATH.'advertisement/'.$recentAd[0]->image)) {
+											$thumbnail = UPLOAD_URL.'advertisement/'.$recentAd[0]->image;
+										}else{
+											$thumbnail = UPLOAD_URL.'noimage.png';
+										}
+								    ?>
+						<a href="<?php echo($recentAd[0]->url) ?>"><img class="img-responsive center-block"
+								style="width:300px;height:250px" src="<?php echo($thumbnail); ?>" alt=""></a>
+						<?php 
+									}
+									?>
 						</div>
 						<!-- /ad -->
 
@@ -328,33 +341,29 @@ This Privacy Policy was created for roomyan.com by PolicyMaker.io on 2020-06-08.
 								<h2>Most Read</h2>
 							</div>
 
-							<div class="post post-widget">
-								<a class="post-img" href="blog-post.html"><img src="assets/img/widget-1.jpg" alt=""></a>
-								<div class="post-body">
-									<h1 class="post-title"><a href="blog-post.html">Tell-A-Tool: Guide To Web Design And Development Tools</a></h1>
-								</div>
-							</div>
+							<?php 
+								$popularBlog = $Blog->getAllPopularBlogsWithLimit(0,4);
+								if ($popularBlog) {
+									foreach ($popularBlog as $key => $blog) {
+										if (isset($blog->image) && !empty($blog->image) && file_exists(UPLOAD_PATH.'blog/'.$blog->image)) {
+											$thumbnail = UPLOAD_URL.'blog/'.$blog->image;
+										}else{
+											$thumbnail = UPLOAD_URL.'noimage.png';
+										}
+							?>
+					<div class="post post-widget">
+						<a class="post-img" href="blog-post?id=<?php echo $blog->id ?>"><img
+								src="<?php echo($thumbnail); ?>" alt=""></a>
+						<div class="post-body">
+							<h3 class="post-title"><a
+									href="blog-post?id=<?php echo $blog->id ?>"><?php echo $blog->title; ?></a></h3>
+						</div>
+					</div>
 
-							<div class="post post-widget">
-								<a class="post-img" href="blog-post.html"><img src="assets/img/widget-2.jpg" alt=""></a>
-								<div class="post-body">
-									<h1 class="post-title"><a href="blog-post.html">Pagedraw UI Builder Turns Your Website Design Mockup Into Code Automatically</a></h1>
-								</div>
-							</div>
-
-							<div class="post post-widget">
-								<a class="post-img" href="blog-post.html"><img src="assets/img/widget-3.jpg" alt=""></a>
-								<div class="post-body">
-									<h1 class="post-title"><a href="blog-post.html">Why Node.js Is The Coolest Kid On The Backend Development Block!</a></h1>
-								</div>
-							</div>
-
-							<div class="post post-widget">
-								<a class="post-img" href="blog-post.html"><img src="assets/img/widget-4.jpg" alt=""></a>
-								<div class="post-body">
-									<h1 class="post-title"><a href="blog-post.html">Tell-A-Tool: Guide To Web Design And Development Tools</a></h1>
-								</div>
-							</div>
+					<?php
+									}
+								}
+							?>
 						</div>
 						<!-- /post widget -->
 					</div>
